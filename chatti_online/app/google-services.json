@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "498202987432",
+    "firebase_url": "https://chatti-online.firebaseio.com",
+    "project_id": "chatti-online",
+    "storage_bucket": "chatti-online.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498202987432:android:ee1fb932ded79a4917eb9d",
+        "android_client_info": {
+          "package_name": "com.example.chatti_online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498202987432-1pdm2n15ugiuv85n85nmrnidgm4un5vu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9V7MlQxpKZ1ydDxJqE3hkecQ5EQ0RprU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498202987432-1pdm2n15ugiuv85n85nmrnidgm4un5vu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
