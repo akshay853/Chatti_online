@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
                  {
                      i=1;
                  }
+                 else
+                 {
+                     i=0;
+                 }
              }
          });
 
@@ -45,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
                  if(b)
                  {
                      i=2;
+                 }
+                 else
+                 {
+                     i=0;
                  }
              }
          });
@@ -56,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
                  {
                      i=3;
                  }
+                 else
+                 {
+                     i=0;
+                 }
              }
          });
 
@@ -65,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
                  if(b)
                  {
                      i=4;
+                 }
+                 else
+                 {
+                     i=0;
                  }
              }
          });
@@ -76,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
                  {
                      i=5;
                  }
+                 else
+                 {
+                     i=0;
+                 }
              }
          });
          d6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -84,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
                  if(b)
                  {
                      i=6;
+                 }
+                 else
+                 {
+                     i = 0;
                  }
              }
          });

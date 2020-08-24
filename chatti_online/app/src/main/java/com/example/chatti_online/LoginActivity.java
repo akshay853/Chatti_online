@@ -3,7 +3,9 @@ package com.example.chatti_online;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     private FirebaseAuth auth;
     private  FirebaseAuth.AuthStateListener authStateListener;
+    public static final String MyPREFERENCES = "MyPrefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email1,pasword;
+                final String email1,pasword;
                 email1= email.getText().toString();
                 pasword= pass.getText().toString();
                 if(email1.isEmpty())
@@ -85,12 +88,17 @@ public class LoginActivity extends AppCompatActivity {
                     firebaseAuth.signInWithEmailAndPassword(email1,pasword).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+                            SharedPreferences sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
                             if(!task.isSuccessful())
                             {
                                 Toast.makeText(LoginActivity.this, "login failed or error", Toast.LENGTH_SHORT).show();
                             }
                             else
                             {
+
+                               SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("user_email",email1);
+                                editor.commit();
                                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                                 startActivity(intent);
                             }
